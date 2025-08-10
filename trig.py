@@ -58,7 +58,7 @@ def play_tan():
         st.write(f'The tangent of {key} is ?', end=' ')
         ans = st.number_input('--->')
         st.write(ans, end= ' ')
-        decimal_places = len(ans.split('.')[1]) if '.' in ans else 0
+        decimal_places = len(str(ans).split('.')[1]) if '.' in ans else 0
         
         try:
             user_answer = float(ans)
