@@ -1,4 +1,5 @@
 import streamlit as st
+import math
 from random import choice
 sine = { 0: 0,
         30: 1/2,
@@ -20,6 +21,12 @@ tangent = {0: 0,
           60: (3**(1/2)),
           90: 0.000000
           }
+
+#defining an helper function to help with the rounding for comparism
+def truncate_float(value, decimal):
+    factor = 10**decimal
+    return math.floor(value*factor)/factor
+
 
 def play_sine():
     keys = list(sine.keys())
