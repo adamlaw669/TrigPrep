@@ -37,17 +37,16 @@ def play_sine():
     for i in range(x):
         key = choice(keys)
         st.write(f'The sine of {key} is ?', end='')
-        ans = st.number_input('--->', key = f'sine_input_{i}')
-        st.write(ans, end= ' ')
+        ans = st.number_input('',key = f'sine_input_{i}')
         decimal_places = len(str(ans).split('.')[1]) if '.' in str(ans) else 1
         
         try:
             user_answer = float(ans)
             if user_answer ==  truncate_float(float(sine[key]), decimal_places):
                 score += 1
-                st.write('✅')
+                st.info('Correct❕')
             else:
-                st.write('❌') 
+                st.info(f'Wrong❗ The correct answer is {sine[key]}')
         except ValueError:
             print('Invalid input. Please enter a numeric value.')
     
@@ -63,7 +62,7 @@ def play_tan():
     for i in range(x):
         key = choice(keys)
         st.write(f'The tangent of {key} is ?', end=' ')
-        ans = st.number_input('--->', key = f'tan_input_{i}')
+        ans = st.number_input('', key = f'tan_input_{i}')
         st.write(ans, end= ' ')
         decimal_places = len(str(ans).split('.')[1]) if '.' in str(ans) else 1
         
@@ -71,9 +70,9 @@ def play_tan():
             user_answer = float(ans)
             if user_answer == truncate_float(float(tangent[key]), decimal_places):
                 score += 1
-                st.write('✅')
+                st.info('Correct❕')
             else:
-                st.write('❌') 
+                st.info(f'Wrong❗ The correct answer is {tangent[key]}')
         except ValueError:
             print('Invalid input. Please enter a numeric value.')
     
@@ -89,7 +88,7 @@ def play_cos():
     for i in range(x):
         key = choice(keys)
         print(f'The cosine of {key} is ?', end=' ')
-        ans = st.number_input('--->', key = f'cos_input_{i}')
+        ans = st.number_input('', key = f'cos_input_{i}')
         st.write(ans, end= ' ')
         decimal_places = len(str(ans).split('.')[1]) if '.' in str(ans) else 1
         
@@ -97,9 +96,9 @@ def play_cos():
             user_answer = float(ans)
             if user_answer == truncate_float(float(cosine[key]), decimal_places):
                 score += 1
-                st.write('✅')
+                st.info('Correct❕')
             else:
-                st.write('❌')  
+                st.info(f'Wrong❗ The correct answer is {cosine[key]}') 
         except ValueError:
             print('Invalid input. Please enter a numeric value.')
     
