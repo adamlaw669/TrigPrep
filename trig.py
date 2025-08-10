@@ -104,7 +104,6 @@ def play_cos():
     
     st.sidebar.write(f'Your score: {score}/{x}')
     
-    
 
 
 st.title('Trigonometry Practice')
