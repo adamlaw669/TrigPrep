@@ -29,7 +29,7 @@ def play_sine():
     st.sidebar.write('Score:', score)
     for i in range(x):
         key = choice(keys)
-        st.write(f'The sine of {key} is ', end='')
+        st.write(f'The sine of {key} is ?', end='')
         ans = st.number_input('--->')
         st.write(ans, end= ' ')
         decimal_places = len(ans.split('.')[1]) if '.' in ans else 0
@@ -55,7 +55,7 @@ def play_tan():
     st.sidebar.write('Score:', score)
     for i in range(x):
         key = choice(keys)
-        st.write(f'The tangent of {key} is', end=' ')
+        st.write(f'The tangent of {key} is ?', end=' ')
         ans = st.number_input('--->')
         st.write(ans, end= ' ')
         decimal_places = len(ans.split('.')[1]) if '.' in ans else 0
@@ -81,7 +81,7 @@ def play_cos():
     st.sidebar.write('Score:', score)
     for i in range(x):
         key = choice(keys)
-        print(f'The cosine of {key} is ', end=' ')
+        print(f'The cosine of {key} is ?', end=' ')
         ans = st.number_input('--->')
         st.write(ans, end= ' ')
         decimal_places = len(ans.split('.')[1]) if '.' in ans else 0
