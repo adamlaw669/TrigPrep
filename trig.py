@@ -25,7 +25,7 @@ tangent = {0: 0,
 #defining an helper function to help with the rounding for comparism
 def truncate_float(value, decimal):
     factor = 10**decimal
-    return math.floor(value*factor)/factor
+    return float(math.floor(value*factor)/factor)
 
 
 def play_sine():
