@@ -37,9 +37,9 @@ def play_sine():
     for i in range(x):
         key = choice(keys)
         st.write(f'The sine of {key} is ?', end='')
-        ans = st.number_input('--->')
+        ans = str(st.number_input('--->'))
         st.write(ans, end= ' ')
-        decimal_places = len(str(ans).split('.')[1]) if '.' in ans else 1
+        decimal_places = len(ans.split('.')[1]) if '.' in ans else 1
         
         try:
             user_answer = float(ans)
@@ -63,9 +63,9 @@ def play_tan():
     for i in range(x):
         key = choice(keys)
         st.write(f'The tangent of {key} is ?', end=' ')
-        ans = st.number_input('--->')
+        ans = str(st.number_input('--->'))
         st.write(ans, end= ' ')
-        decimal_places = len(str(ans).split('.')[1]) if '.' in ans else 1
+        decimal_places = len(ans.split('.')[1]) if '.' in ans else 1
         
         try:
             user_answer = float(ans)
@@ -89,9 +89,9 @@ def play_cos():
     for i in range(x):
         key = choice(keys)
         print(f'The cosine of {key} is ?', end=' ')
-        ans = st.number_input('--->')
+        ans = str(st.number_input('--->'))
         st.write(ans, end= ' ')
-        decimal_places = len(str(ans).split('.')[1]) if '.' in ans else 1
+        decimal_places = len(ans.split('.')[1]) if '.' in ans else 1
         
         try:
             user_answer = float(ans)
