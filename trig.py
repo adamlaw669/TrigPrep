@@ -39,11 +39,11 @@ def play_sine():
         st.write(f'The sine of {key} is ?', end='')
         ans = st.number_input('--->')
         st.write(ans, end= ' ')
-        decimal_places = len(ans.split('.')[1]) if '.' in ans else 0
+        decimal_places = len(str(ans).split('.')[1]) if '.' in ans else 1
         
         try:
             user_answer = float(ans)
-            if user_answer == round(float(sine[key]), decimal_places):
+            if user_answer ==  truncate_float(float(sine[key]), decimal_places):
                 score += 1
                 st.write('✅')
             else:
@@ -65,11 +65,11 @@ def play_tan():
         st.write(f'The tangent of {key} is ?', end=' ')
         ans = st.number_input('--->')
         st.write(ans, end= ' ')
-        decimal_places = len(str(ans).split('.')[1]) if '.' in ans else 0
+        decimal_places = len(str(ans).split('.')[1]) if '.' in ans else 1
         
         try:
             user_answer = float(ans)
-            if user_answer == round(float(tangent[key]), decimal_places):
+            if user_answer == truncate_float(float(tangent[key]), decimal_places):
                 score += 1
                 st.write('✅')
             else:
@@ -91,11 +91,11 @@ def play_cos():
         print(f'The cosine of {key} is ?', end=' ')
         ans = st.number_input('--->')
         st.write(ans, end= ' ')
-        decimal_places = len(ans.split('.')[1]) if '.' in ans else 0
+        decimal_places = len(str(ans).split('.')[1]) if '.' in ans else 1
         
         try:
             user_answer = float(ans)
-            if user_answer == round(float(cosine[key]), decimal_places):
+            if user_answer == truncate_float(float(cosine[key]), decimal_places):
                 score += 1
                 st.write('✅')
             else:
