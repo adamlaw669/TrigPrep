@@ -122,3 +122,5 @@ elif practice_options == 'Tangent':
 elif practice_options == 'Cosine':
         play_cos()
         progress_bar.progress(100)
+
+
