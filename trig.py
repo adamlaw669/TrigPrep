@@ -124,3 +124,5 @@ elif practice_options == 'Cosine':
         progress_bar.progress(100)
 
 
+
+
